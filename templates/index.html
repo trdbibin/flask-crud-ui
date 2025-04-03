@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flask CRUD UI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <h1>User Records</h1>
+
+  <form id="recordForm" class="mb-4">
+    <input type="hidden" id="recordId">
+    <div class="row g-3 mb-2">
+      <div class="col"><input type="text" id="title" class="form-control" placeholder="Title" required></div>
+      <div class="col"><input type="text" id="description" class="form-control" placeholder="Description"></div>
+      <div class="col"><input type="text" id="author" class="form-control" placeholder="Author"></div>
+      <div class="col"><input type="text" id="category" class="form-control" placeholder="Category"></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" id="cancelEdit" class="btn btn-secondary d-none">Cancel</button>
+  </form>
+
+  <table class="table table-bordered">
+    <thead><tr><th>Title</th><th>Description</th><th>Author</th><th>Category</th><th>Date</th><th>Actions</th></tr></thead>
+    <tbody id="recordsTable"></tbody>
+  </table>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
